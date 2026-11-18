@@ -1,0 +1,25 @@
+info:
+  name: SvCancionCrear
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://localhost:8080/NOMBRE-DE-TU-PROYECTO/SvCancionCrear
+  body:
+    type: form-urlencoded
+    data:
+      - name: titulo
+        value: lucia
+      - name: duracion
+        value: "2"
+      - name: anio
+        value: "2025"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

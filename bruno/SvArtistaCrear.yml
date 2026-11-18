@@ -1,0 +1,27 @@
+info:
+  name: SvArtistaCrear
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:8080/actividad_14/SvArtistaCrear.
+  body:
+    type: form-urlencoded
+    data:
+      - name: nombre
+        value: MiloJ
+      - name: generoMusical
+        value: todo
+      - name: nacionalidad
+        value: argentina
+      - name: edad
+        value: "19"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
