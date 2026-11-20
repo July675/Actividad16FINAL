@@ -1,43 +1,68 @@
-package com.app.logica;
 
+package com.app.logica;
 
 import jakarta.persistence.Basic;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+
 import java.io.Serializable;
 
 @Entity
 public class Cancion implements Serializable {
 
-   
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
 
 	@Basic
-    private String titulo;
-    private float duracion; 
-    private int anio;
+	private String titulo;
 
-    public Cancion() { }
+	private float duracion;
 
-    public Cancion(String titulo, float duracion, int anio) {
-        this.titulo = titulo;
-        this.duracion = duracion;
-        this.anio = anio;
-    }
+	private int anio;
 
-    // getters/setters
-    public int getId() { return id; }
-    public String getTitulo() { return titulo; }
-    public void setTitulo(String titulo) { this.titulo = titulo; }
-    public float getDuracion() { return duracion; }
-    public void setDuracion(int duracion) { this.duracion = duracion; }
-    public int getAnio() { return anio; }
-    public void setAnio(int anio) { this.anio = anio; }
+	public Cancion() {
+	}
+
+	public Cancion(String titulo, float duracion, int anio) {
+		this.titulo = titulo;
+		this.duracion = duracion;
+		this.anio = anio;
+	}
+
+	// Getters y setters
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public float getDuracion() {
+		return duracion;
+	}
+
+	public void setDuracion(float duracion) {
+		this.duracion = duracion;
+	}
+
+	public int getAnio() {
+		return anio;
+	}
+
+	public void setAnio(int anio) {
+		this.anio = anio;
+	}
 }
-
-

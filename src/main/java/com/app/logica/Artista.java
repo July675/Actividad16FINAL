@@ -1,5 +1,7 @@
 package com.app.logica;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import jakarta.persistence.Basic;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,39 +17,75 @@ import java.util.Date;
 public class Artista implements Serializable {
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
 
-    @Basic
-    private String nombre;
-    private String generoMusical;
-    private String nacionalidad;
-    private int edad;
-   
-    @Temporal(TemporalType.DATE)
-    private Date fechaNacimiento;
-    
+	@Basic
+	private String nombre;
+	private String generoMusical;
+	private String nacionalidad;
+	private int edad;
 
-    public Artista() { }
-    public Artista(String nombre, String generoMusical, String nacionalidad, int edad, Date fechaNacimiento) {
-        this.nombre = nombre;
-        this.generoMusical = generoMusical;
-        this.nacionalidad = nacionalidad;
-        this.edad = edad;
-        this.fechaNacimiento = fechaNacimiento;
-    }
+	@Temporal(TemporalType.DATE)
+	private Date fechaNacimiento;
 
-    // getters/setters
-    public int getId() { return id; }
-    public String getNombre() { return nombre; }
-    public void setNombre(String nombre) { this.nombre = nombre; }
-    public String getGeneroMusical() { return generoMusical; }
-    public void setGeneroMusical(String generoMusical) { this.generoMusical = generoMusical; }
-    public String getNacionalidad() { return nacionalidad; }
-    public void setNacionalidad(String nacionalidad) { this.nacionalidad = nacionalidad; }
-    public int getEdad() { return edad; }
-    public void setEdad(int edad) { this.edad = edad; }
- // NUEVOS: Getters y Setters para fechaNacimiento
-    public Date getFechaNacimiento() { return fechaNacimiento; }
-    public void setFechaNacimiento(Date fechaNacimiento) { this.fechaNacimiento = fechaNacimiento; }
+	public Artista() {
+	}
+
+	public Artista(String nombre, String generoMusical, String nacionalidad, int edad, Date fechaNacimiento) {
+		this.nombre = nombre;
+		this.generoMusical = generoMusical;
+		this.nacionalidad = nacionalidad;
+		this.edad = edad;
+		this.fechaNacimiento = fechaNacimiento;
+	}
+
+	// getters/setters
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getGeneroMusical() {
+		return generoMusical;
+	}
+
+	public void setGeneroMusical(String generoMusical) {
+		this.generoMusical = generoMusical;
+	}
+
+	public String getNacionalidad() {
+		return nacionalidad;
+	}
+
+	public void setNacionalidad(String nacionalidad) {
+		this.nacionalidad = nacionalidad;
+	}
+
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+
+	public Date getFechaNacimiento() {
+		return fechaNacimiento;
+	}
+
+	public void setFechaNacimiento(Date fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
+	}
 }
